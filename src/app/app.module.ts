@@ -17,6 +17,10 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { ContactComponent } from './contact/contact.component';
 import { ChartsComponent } from './fusioncharts/fusioncharts.component';
 
+// Fix for "Expression has changed after it was checked. Previous value: container-"
+import {enableProdMode} from '@angular/core'
+enableProdMode();
+
 import * as FusionCharts from 'fusioncharts';
 import * as Charts from 'fusioncharts/fusioncharts.charts';
 import * as Widgets from 'fusioncharts/fusioncharts.widgets';
