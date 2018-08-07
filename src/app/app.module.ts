@@ -6,7 +6,7 @@ import { GithubService } from './github/shared/github.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
-import { FusionChartsModule } from 'angular2-fusioncharts';
+import { FusionChartsModule } from 'angular-fusioncharts';
 
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
@@ -24,7 +24,7 @@ enableProdMode();
 import * as FusionCharts from 'fusioncharts';
 import * as Charts from 'fusioncharts/fusioncharts.charts';
 import * as Widgets from 'fusioncharts/fusioncharts.widgets';
-
+FusionChartsModule.fcRoot(FusionCharts, Charts, Widgets);
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +41,7 @@ import * as Widgets from 'fusioncharts/fusioncharts.widgets';
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
-    FusionChartsModule.forRoot(FusionCharts, Charts, Widgets),
+    FusionChartsModule,
     RouterModule.forRoot(rootRouterConfig, { useHash: true })
   ],
   providers: [
